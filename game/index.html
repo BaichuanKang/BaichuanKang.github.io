@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f7e8d6">
+  <title>合成十三香</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="layout">
+    <header class="top">
+      <div><p class="eyebrow"><a href="../" style="color:inherit;text-decoration:none">← 啃白菜的小站</a></p><h1>合成十三香<span>✨</span></h1><p class="sub">把相同的头像碰到一起，合成更大的十三香。</p></div>
+      <button id="soundBtn" class="icon" aria-label="切换音效"><span class="ico">🔊</span></button>
+    </header>
+    <section class="game-area">
+      <div class="play-column">
+        <div class="board-head"><div>当前得分 <strong id="score">0</strong></div><div>最高得分 <strong id="best">0</strong></div></div>
+        <div class="board-wrap" id="stage">
+        <canvas id="game" width="420" height="700" aria-label="合成十三香游戏棋盘"></canvas>
+        <div id="overlay" class="overlay"><div class="overlay-card"><div class="sparkle">✨</div><h2>游戏结束</h2><p>这次得分 <strong id="finalScore">0</strong></p><p>个人最高 <strong id="finalBest">0</strong></p><button id="restartBtn" class="primary">再玩一次</button></div></div>
+        </div>
+      </div>
+      <aside class="side">
+        <div class="next-card"><span>下一个</span><div class="next-bubble"><canvas id="next" width="160" height="160" aria-label="下一个头像"></canvas></div></div>
+        <div class="progress-card"><div class="card-title">合成图鉴 <small>相同头像合成下一级</small></div><div id="levels" class="levels"></div></div>
+        <div class="controls"><button id="resetBtn" class="primary">重新开始</button><p>手机：滑动选择位置，松手投放<br>电脑：移动鼠标，点击投放<br>键盘：← → 移动，空格投放</p></div>
+      </aside>
+    </section>
+  </main>
+  <script src="assets/parts.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
